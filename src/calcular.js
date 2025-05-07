@@ -10,9 +10,31 @@
 // - Executar a operação correta e retornar o resultado;
 
 function calcular(num1, num2, operador) {
+if (operador == "+") {
+  return num1 + num2
+}
+if (operador == "-") {
+  return num1 - num2
+}
+if (operador == "*") {
+  return num1 * num2
+}
+if (operador == "/"){
+  if (num1 == 0){
+    return "Erro"
+  }
+  if (num2 == 0){
+    return "Erro"
+  }
+  else{
+    return num1 / num2
+  }
+}
+else{
+  return "erro"
+}
   // TODO: implementar função
 }
-
-
+console.log(calcular(1, 5, `-`))
 //NÃO REMOVA O CÓDIGO ABAIXO
 module.exports = { calcular };
